@@ -1,0 +1,28 @@
+mkdir terraform
+
+git clone
+
+terraform init
+
+terraform validate
+
+sudo apt  install awscli
+
+aws configure
+
+ssh-keygen -t rsa -b 2048 -f terraform-key
+
+terraform validate
+
+terraform plan
+
+terraform apply --auto-approve
+
+sudo ansible all -m ping -i inventory
+
+sudo ansible-playbook -i inventory  ansi-playbook.yml
+
+#check if Ansible configures the AWS infrastructure created by Terraform successfully, you completed the Terraform-Ansible Integration Project
+and now its time to destroy the infrastructure created by Terraform.
+
+terraform destroy
