@@ -1,0 +1,15 @@
+#Downlod the latest version of terraform
+
+wget https://releases.hashicorp.com/terraform/1.7.3/terraform_1.7.3_linux_amd64.zip
+
+
+#install UNZIP in ubuntu
+
+sudo apt instll unzip
+
+#unzip the downloaded file
+unzip terraform_1.7.3_linux_amd64.zip
+
+sudo mv terraform /usr/local/bin/
+
+terraform --version
