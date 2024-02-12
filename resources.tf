@@ -19,7 +19,7 @@ resource "aws_instance" "my-instance" {
 
     tags = {
       
-      Name = "terra-slave"
+      Name = var.terraInstance
     }
 
     key_name = aws_key_pair.my-key-pair.key_name
@@ -79,7 +79,7 @@ resource "null_resource" "ConfigureAnsibleInventory" {
 
   provisioner "local-exec" {
 
-       command = "echo [prod] > inventory"
+       command = "echo [${var.terraInstance}] > inventory"
     
   }
   provisioner "local-exec" {
